@@ -1,0 +1,271 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Symbol table implementation internals
+
+#include "Vtop__Syms.h"
+#include "Vtop.h"
+
+
+
+// FUNCTIONS
+Vtop__Syms::Vtop__Syms(Vtop* topp, const char* namep)
+    // Setup locals
+    : __Vm_namep(namep)
+    , __Vm_didInit(false)
+    // Setup submodule names
+{
+    // Pointer to top level
+    TOPp = topp;
+    // Setup each module's pointers to their submodules
+    // Setup each module's pointer back to symbol table (for public functions)
+    TOPp->__Vconfigure(this, true);
+    // Setup scopes
+    __Vscope_TOP.configure(this, name(), "TOP", "TOP", 0, VerilatedScope::SCOPE_OTHER);
+    __Vscope_lwc.configure(this, name(), "lwc", "lwc", -12, VerilatedScope::SCOPE_MODULE);
+    __Vscope_lwc__ascon.configure(this, name(), "lwc.ascon", "ascon", -12, VerilatedScope::SCOPE_MODULE);
+    __Vscope_lwc__lwc_pdiReceiver_fifof.configure(this, name(), "lwc.lwc_pdiReceiver_fifof", "lwc_pdiReceiver_fifof", -12, VerilatedScope::SCOPE_OTHER);
+    __Vscope_lwc__lwc_pdiReceiver_fifof__error_checks.configure(this, name(), "lwc.lwc_pdiReceiver_fifof.error_checks", "error_checks", -12, VerilatedScope::SCOPE_OTHER);
+    __Vscope_lwc__lwc_sdiReceiver_fifof.configure(this, name(), "lwc.lwc_sdiReceiver_fifof", "lwc_sdiReceiver_fifof", -12, VerilatedScope::SCOPE_OTHER);
+    __Vscope_lwc__lwc_sdiReceiver_fifof__error_checks.configure(this, name(), "lwc.lwc_sdiReceiver_fifof.error_checks", "error_checks", -12, VerilatedScope::SCOPE_OTHER);
+    
+    // Setup scope hierarchy
+    __Vhier.add(0, &__Vscope_lwc);
+    __Vhier.add(0, &__Vscope_lwc__ascon);
+    __Vhier.add(&__Vscope_lwc, &__Vscope_lwc__ascon);
+    
+    // Setup export functions
+    for (int __Vfinal=0; __Vfinal<2; __Vfinal++) {
+        __Vscope_TOP.varInsert(__Vfinal,"clk", &(TOPp->clk), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"do_data", &(TOPp->do_data), false, VLVT_UINT32,VLVD_OUT|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_TOP.varInsert(__Vfinal,"do_last", &(TOPp->do_last), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"do_ready", &(TOPp->do_ready), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"do_valid", &(TOPp->do_valid), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"pdi_data", &(TOPp->pdi_data), false, VLVT_UINT32,VLVD_IN|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_TOP.varInsert(__Vfinal,"pdi_ready", &(TOPp->pdi_ready), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"pdi_valid", &(TOPp->pdi_valid), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"rst", &(TOPp->rst), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"sdi_data", &(TOPp->sdi_data), false, VLVT_UINT32,VLVD_IN|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_TOP.varInsert(__Vfinal,"sdi_ready", &(TOPp->sdi_ready), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,0);
+        __Vscope_TOP.varInsert(__Vfinal,"sdi_valid", &(TOPp->sdi_valid), false, VLVT_UINT8,VLVD_IN|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"CASE_asconbdo_first_BITS_1_TO_0_0_asconbdo_f_ETC__q1", &(TOPp->lwc__DOT__CASE_asconbdo_first_BITS_1_TO_0_0_asconbdo_f_ETC___05Fq1), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"CASE_lwc_pdiReceiver_fifofD_OUT_BITS_31_TO_28_ETC__q2", &(TOPp->lwc__DOT__CASE_lwc_pdiReceiver_fifofD_OUT_BITS_31_TO_28_ETC___05Fq2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"IF_ascon_bdo_first__26_BIT_2_40_THEN_IF_ascon__ETC___d254", &(TOPp->lwc__DOT__IF_ascon_bdo_first___05F26_BIT_2_40_THEN_IF_ascon___05FETC___05F_d254), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"IF_lwc_inSegType_61_EQ_5_64_AND_lwc_inSegEoT_4_ETC___d168", &(TOPp->lwc__DOT__IF_lwc_inSegType_61_EQ_5_64_AND_lwc_inSegEoT_4_ETC___05F_d168), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_ascon$bdi_enq_1__VAL_1", &(TOPp->lwc__DOT__MUX_ascon__024bdi_enq_1___05FVAL_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,34,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_ascon$bdi_enq_1__VAL_2", &(TOPp->lwc__DOT__MUX_ascon__024bdi_enq_1___05FVAL_2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,34,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_ascon$process_1__VAL_1", &(TOPp->lwc__DOT__MUX_ascon__024process_1___05FVAL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_ascon$process_1__VAL_2", &(TOPp->lwc__DOT__MUX_ascon__024process_1___05FVAL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_cntr_r$write_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_cntr_r__024write_1___05FVAL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_0$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_0__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_0$write_1__SEL_2", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_0__024write_1___05FSEL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_0$write_1__VAL_1", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_0__024write_1___05FVAL_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_0$write_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_0__024write_1___05FVAL_2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_1$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_1__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_1$write_1__SEL_2", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_1__024write_1___05FSEL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_q_1$write_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_q_1__024write_1___05FVAL_2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_x_wire$wset_1__VAL_1", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_x_wire__024wset_1___05FVAL_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_x_wire$wset_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_x_wire__024wset_1___05FVAL_2), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_doSender_fifof_x_wire$wset_1__VAL_3", &(TOPp->lwc__DOT__MUX_lwc_doSender_fifof_x_wire__024wset_1___05FVAL_3), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_headersFifo_rv$port1__write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_headersFifo_rv__024port1___05Fwrite_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_headersFifo_rv$port1__write_1__VAL_1", &(TOPp->lwc__DOT__MUX_lwc_headersFifo_rv__024port1___05Fwrite_1___05FVAL_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__SEL_2", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FSEL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__SEL_3", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FSEL_3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__SEL_4", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FSEL_4), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FVAL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__VAL_3", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FVAL_3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inState$write_1__VAL_5", &(TOPp->lwc__DOT__MUX_lwc_inState__024write_1___05FVAL_5), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inWordCounter$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_inWordCounter__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inWordCounter$write_1__SEL_3", &(TOPp->lwc__DOT__MUX_lwc_inWordCounter__024write_1___05FSEL_3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_inWordCounter$write_1__VAL_1", &(TOPp->lwc__DOT__MUX_lwc_inWordCounter__024write_1___05FVAL_1), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outCounter$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_outCounter__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outCounter$write_1__SEL_2", &(TOPp->lwc__DOT__MUX_lwc_outCounter__024write_1___05FSEL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outCounter$write_1__VAL_1", &(TOPp->lwc__DOT__MUX_lwc_outCounter__024write_1___05FVAL_1), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outCounter$write_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_outCounter__024write_1___05FVAL_2), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outState$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_outState__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outState$write_1__SEL_2", &(TOPp->lwc__DOT__MUX_lwc_outState__024write_1___05FSEL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outState$write_1__SEL_3", &(TOPp->lwc__DOT__MUX_lwc_outState__024write_1___05FSEL_3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outState$write_1__VAL_2", &(TOPp->lwc__DOT__MUX_lwc_outState__024write_1___05FVAL_2), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_outState$write_1__VAL_3", &(TOPp->lwc__DOT__MUX_lwc_outState__024write_1___05FVAL_3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"MUX_lwc_statFailure$write_1__SEL_1", &(TOPp->lwc__DOT__MUX_lwc_statFailure__024write_1___05FSEL_1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"NOT_lwc_outCounter_23_BITS_13_TO_1_35_EQ_0_36__ETC___d273", &(TOPp->lwc__DOT__NOT_lwc_outCounter_23_BITS_13_TO_1_35_EQ_0_36___05FETC___05F_d273), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"NOT_lwc_tagFifo_rv_port0__read__19_BITS_31_TO__ETC___d234", &(TOPp->lwc__DOT__NOT_lwc_tagFifo_rv_port0___05Fread___05F19_BITS_31_TO___05FETC___05F_d234), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_doSender_fifof_both", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_doSender_fifof_both), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_doSender_fifof_decCtr", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_doSender_fifof_decCtr), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_doSender_fifof_incCtr", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_doSender_fifof_incCtr), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_enq_tag", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_enq_tag), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_feed_core_pdi", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_feed_core_pdi), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_feed_core_sdi", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_feed_core_sdi), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_get_pdi_hdr", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_get_pdi_hdr), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_get_sdi_hdr", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_get_sdi_hdr), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_get_sdi_inst", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_get_sdi_inst), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_get_tag_data", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_get_tag_data), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_get_tag_hdr", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_get_tag_hdr), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_out_header", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_out_header), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_out_status", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_out_status), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_pdi_instruction", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_pdi_instruction), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_sendout_data", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_sendout_data), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"WILL_FIRE_RL_lwc_rl_verify_tag", &(TOPp->lwc__DOT__WILL_FIRE_RL_lwc_rl_verify_tag), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"_dfoo1", &(TOPp->lwc__DOT___dfoo1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"_dfoo3", &(TOPp->lwc__DOT___dfoo3), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$EN_bdi_enq", &(TOPp->lwc__DOT__ascon__024EN_bdi_enq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$EN_bdo_deq", &(TOPp->lwc__DOT__ascon__024EN_bdo_deq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$EN_process", &(TOPp->lwc__DOT__ascon__024EN_process), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$RDY_bdi_enq", &(TOPp->lwc__DOT__ascon__024RDY_bdi_enq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$RDY_bdo_deq", &(TOPp->lwc__DOT__ascon__024RDY_bdo_deq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$RDY_process", &(TOPp->lwc__DOT__ascon__024RDY_process), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$bdi_enq_el", &(TOPp->lwc__DOT__ascon__024bdi_enq_el), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,34,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$bdo_first", &(TOPp->lwc__DOT__ascon__024bdo_first), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,34,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$process_empty", &(TOPp->lwc__DOT__ascon__024process_empty), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"ascon$process_typ", &(TOPp->lwc__DOT__ascon__024process_typ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"b__h7625", &(TOPp->lwc__DOT__b___05Fh7625), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"b__h7632", &(TOPp->lwc__DOT__b___05Fh7632), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"b__h7635", &(TOPp->lwc__DOT__b___05Fh7635), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"clk", &(TOPp->lwc__DOT__clk), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"do_data", &(TOPp->lwc__DOT__do_data), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"do_last", &(TOPp->lwc__DOT__do_last), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"do_ready", &(TOPp->lwc__DOT__do_ready), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"do_valid", &(TOPp->lwc__DOT__do_valid), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"el_word__h3645", &(TOPp->lwc__DOT__el_word___05Fh3645), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"el_word__h4485", &(TOPp->lwc__DOT__el_word___05Fh4485), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_cntr_r", &(TOPp->lwc__DOT__lwc_doSender_fifof_cntr_r), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_cntr_r_1_MINUS_1___d29", &(TOPp->lwc__DOT__lwc_doSender_fifof_cntr_r_1_MINUS_1___05F_d29), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_cntr_r$D_IN", &(TOPp->lwc__DOT__lwc_doSender_fifof_cntr_r__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_cntr_r$EN", &(TOPp->lwc__DOT__lwc_doSender_fifof_cntr_r__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_dequeueing$whas", &(TOPp->lwc__DOT__lwc_doSender_fifof_dequeueing__024whas), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_enqueueing$whas", &(TOPp->lwc__DOT__lwc_doSender_fifof_enqueueing__024whas), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_q_0", &(TOPp->lwc__DOT__lwc_doSender_fifof_q_0), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_q_0$D_IN", &(TOPp->lwc__DOT__lwc_doSender_fifof_q_0__024D_IN), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_q_0$EN", &(TOPp->lwc__DOT__lwc_doSender_fifof_q_0__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_q_1", &(TOPp->lwc__DOT__lwc_doSender_fifof_q_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_q_1$D_IN", &(TOPp->lwc__DOT__lwc_doSender_fifof_q_1__024D_IN), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_q_1$EN", &(TOPp->lwc__DOT__lwc_doSender_fifof_q_1__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_doSender_fifof_x_wire$whas", &(TOPp->lwc__DOT__lwc_doSender_fifof_x_wire__024whas), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_finalRemainBytes", &(TOPp->lwc__DOT__lwc_finalRemainBytes), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_finalRemainBytes$D_IN", &(TOPp->lwc__DOT__lwc_finalRemainBytes__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_finalRemainBytes$EN", &(TOPp->lwc__DOT__lwc_finalRemainBytes__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv", &(TOPp->lwc__DOT__lwc_headersFifo_rv), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$D_IN", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024D_IN), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$EN", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$EN_port1__write", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024EN_port1___05Fwrite), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$port0__write_1", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024port0___05Fwrite_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$port1__read", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024port1___05Fread), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$port1__write_1", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024port1___05Fwrite_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_headersFifo_rv$port2__read", &(TOPp->lwc__DOT__lwc_headersFifo_rv__024port2___05Fread), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegEoT", &(TOPp->lwc__DOT__lwc_inSegEoT), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegEoT$D_IN", &(TOPp->lwc__DOT__lwc_inSegEoT__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegEoT$EN", &(TOPp->lwc__DOT__lwc_inSegEoT__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegLast", &(TOPp->lwc__DOT__lwc_inSegLast), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegLast$D_IN", &(TOPp->lwc__DOT__lwc_inSegLast__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegLast$EN", &(TOPp->lwc__DOT__lwc_inSegLast__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegType", &(TOPp->lwc__DOT__lwc_inSegType), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegType$D_IN", &(TOPp->lwc__DOT__lwc_inSegType__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inSegType$EN", &(TOPp->lwc__DOT__lwc_inSegType__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inState", &(TOPp->lwc__DOT__lwc_inState), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inState$D_IN", &(TOPp->lwc__DOT__lwc_inState__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inState$EN", &(TOPp->lwc__DOT__lwc_inState__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inWordCounter", &(TOPp->lwc__DOT__lwc_inWordCounter), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inWordCounter_28_BITS_13_TO_1_36_EQ_0_37_A_ETC___d145", &(TOPp->lwc__DOT__lwc_inWordCounter_28_BITS_13_TO_1_36_EQ_0_37_A_ETC___05F_d145), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inWordCounter$D_IN", &(TOPp->lwc__DOT__lwc_inWordCounter__024D_IN), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_inWordCounter$EN", &(TOPp->lwc__DOT__lwc_inWordCounter__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outCounter", &(TOPp->lwc__DOT__lwc_outCounter), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outCounter$D_IN", &(TOPp->lwc__DOT__lwc_outCounter__024D_IN), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outCounter$EN", &(TOPp->lwc__DOT__lwc_outCounter__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outRemainder", &(TOPp->lwc__DOT__lwc_outRemainder), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outRemainder$D_IN", &(TOPp->lwc__DOT__lwc_outRemainder__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outRemainder$EN", &(TOPp->lwc__DOT__lwc_outRemainder__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outSegLast", &(TOPp->lwc__DOT__lwc_outSegLast), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outSegLast$D_IN", &(TOPp->lwc__DOT__lwc_outSegLast__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outSegLast$EN", &(TOPp->lwc__DOT__lwc_outSegLast__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outSegType", &(TOPp->lwc__DOT__lwc_outSegType), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outSegType$D_IN", &(TOPp->lwc__DOT__lwc_outSegType__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outSegType$EN", &(TOPp->lwc__DOT__lwc_outSegType__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outState", &(TOPp->lwc__DOT__lwc_outState), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outState$D_IN", &(TOPp->lwc__DOT__lwc_outState__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_outState$EN", &(TOPp->lwc__DOT__lwc_outState__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_deq_pw$whas", &(TOPp->lwc__DOT__lwc_pdiReceiver_deq_pw__024whas), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$CLR", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024CLR), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$DEQ", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024DEQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$D_IN", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024D_IN), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$D_OUT", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024D_OUT), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$EMPTY_N", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024EMPTY_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$ENQ", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024ENQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_pdiReceiver_fifof$FULL_N", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__024FULL_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_deq_pw$whas", &(TOPp->lwc__DOT__lwc_sdiReceiver_deq_pw__024whas), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$CLR", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024CLR), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$DEQ", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024DEQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$D_IN", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024D_IN), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$D_OUT", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024D_OUT), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$EMPTY_N", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024EMPTY_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$ENQ", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024ENQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_sdiReceiver_fifof$FULL_N", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__024FULL_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_statFailure", &(TOPp->lwc__DOT__lwc_statFailure), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_statFailure$D_IN", &(TOPp->lwc__DOT__lwc_statFailure__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_statFailure$EN", &(TOPp->lwc__DOT__lwc_statFailure__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_tagFifo_rv", &(TOPp->lwc__DOT__lwc_tagFifo_rv), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_tagFifo_rv$D_IN", &(TOPp->lwc__DOT__lwc_tagFifo_rv__024D_IN), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_tagFifo_rv$EN", &(TOPp->lwc__DOT__lwc_tagFifo_rv__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_tagFifo_rv$port1__read", &(TOPp->lwc__DOT__lwc_tagFifo_rv__024port1___05Fread), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_tagFifo_rv$port1__write_1", &(TOPp->lwc__DOT__lwc_tagFifo_rv__024port1___05Fwrite_1), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"lwc_tagFifo_rv$port2__read", &(TOPp->lwc__DOT__lwc_tagFifo_rv__024port2___05Fread), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,32,0);
+        __Vscope_lwc.varInsert(__Vfinal,"pdi_data", &(TOPp->lwc__DOT__pdi_data), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"pdi_ready", &(TOPp->lwc__DOT__pdi_ready), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"pdi_valid", &(TOPp->lwc__DOT__pdi_valid), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"rst", &(TOPp->lwc__DOT__rst), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"sdi_data", &(TOPp->lwc__DOT__sdi_data), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"sdi_ready", &(TOPp->lwc__DOT__sdi_ready), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"sdi_valid", &(TOPp->lwc__DOT__sdi_valid), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc.varInsert(__Vfinal,"sw__h6283", &(TOPp->lwc__DOT__sw___05Fh6283), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"x__h7136", &(TOPp->lwc__DOT__x___05Fh7136), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc.varInsert(__Vfinal,"x__h8042", &(TOPp->lwc__DOT__x___05Fh8042), false, VLVT_UINT16,VLVD_NODIR|VLVF_PUB_RW,1 ,13,0);
+        __Vscope_lwc.varInsert(__Vfinal,"x__h8126", &(TOPp->lwc__DOT__x___05Fh8126), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"CLK", &(TOPp->lwc__DOT__ascon__DOT__CLK), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"EN_bdi_enq", &(TOPp->lwc__DOT__ascon__DOT__EN_bdi_enq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"EN_bdo_deq", &(TOPp->lwc__DOT__ascon__DOT__EN_bdo_deq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"EN_process", &(TOPp->lwc__DOT__ascon__DOT__EN_process), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"RDY_bdi_enq", &(TOPp->lwc__DOT__ascon__DOT__RDY_bdi_enq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"RDY_bdo_deq", &(TOPp->lwc__DOT__ascon__DOT__RDY_bdo_deq), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"RDY_process", &(TOPp->lwc__DOT__ascon__DOT__RDY_process), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"RST_N", &(TOPp->lwc__DOT__ascon__DOT__RST_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"bdi_enq_el", &(TOPp->lwc__DOT__ascon__DOT__bdi_enq_el), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,34,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"bdo_first", &(TOPp->lwc__DOT__ascon__DOT__bdo_first), false, VLVT_UINT64,VLVD_NODIR|VLVF_PUB_RW,1 ,34,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"bdo_notEmpty", &(TOPp->lwc__DOT__ascon__DOT__bdo_notEmpty), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"piso_countReg", &(TOPp->lwc__DOT__ascon__DOT__piso_countReg), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"piso_countReg$D_IN", &(TOPp->lwc__DOT__ascon__DOT__piso_countReg__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"piso_countReg$EN", &(TOPp->lwc__DOT__ascon__DOT__piso_countReg__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"piso_vec", &(TOPp->lwc__DOT__ascon__DOT__piso_vec), false, VLVT_WDATA,VLVD_NODIR|VLVF_PUB_RW,1 ,319,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"piso_vec$D_IN", &(TOPp->lwc__DOT__ascon__DOT__piso_vec__024D_IN), false, VLVT_WDATA,VLVD_NODIR|VLVF_PUB_RW,1 ,319,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"piso_vec$EN", &(TOPp->lwc__DOT__ascon__DOT__piso_vec__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"process_empty", &(TOPp->lwc__DOT__ascon__DOT__process_empty), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"process_typ", &(TOPp->lwc__DOT__ascon__DOT__process_typ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"sipo_count_reg", &(TOPp->lwc__DOT__ascon__DOT__sipo_count_reg), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"sipo_count_reg$D_IN", &(TOPp->lwc__DOT__ascon__DOT__sipo_count_reg__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,3,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"sipo_count_reg$EN", &(TOPp->lwc__DOT__ascon__DOT__sipo_count_reg__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"state", &(TOPp->lwc__DOT__ascon__DOT__state), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"state$D_IN", &(TOPp->lwc__DOT__ascon__DOT__state__024D_IN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,1 ,1,0);
+        __Vscope_lwc__ascon.varInsert(__Vfinal,"state$EN", &(TOPp->lwc__DOT__ascon__DOT__state__024EN), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"CLK", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__CLK), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"CLR", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__CLR), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"DEQ", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__DEQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"D_IN", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__D_IN), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"D_OUT", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__D_OUT), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"EMPTY_N", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__EMPTY_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"ENQ", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__ENQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"FULL_N", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__FULL_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"RST", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__RST), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof.varInsert(__Vfinal,"empty_reg", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__empty_reg), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof__error_checks.varInsert(__Vfinal,"deqerror", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__error_checks__DOT__deqerror), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_pdiReceiver_fifof__error_checks.varInsert(__Vfinal,"enqerror", &(TOPp->lwc__DOT__lwc_pdiReceiver_fifof__DOT__error_checks__DOT__enqerror), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"CLK", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__CLK), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"CLR", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__CLR), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"DEQ", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__DEQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"D_IN", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__D_IN), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"D_OUT", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__D_OUT), false, VLVT_UINT32,VLVD_NODIR|VLVF_PUB_RW,1 ,31,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"EMPTY_N", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__EMPTY_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"ENQ", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__ENQ), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"FULL_N", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__FULL_N), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"RST", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__RST), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof.varInsert(__Vfinal,"empty_reg", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__empty_reg), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof__error_checks.varInsert(__Vfinal,"deqerror", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__error_checks__DOT__deqerror), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+        __Vscope_lwc__lwc_sdiReceiver_fifof__error_checks.varInsert(__Vfinal,"enqerror", &(TOPp->lwc__DOT__lwc_sdiReceiver_fifof__DOT__error_checks__DOT__enqerror), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
+    }
+}

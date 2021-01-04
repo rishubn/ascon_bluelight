@@ -1,0 +1,9 @@
+[Log] == Verifying msg ID #1 for ENC
+[Log]     Expected: 52000000 Received: 52000000 Matched!
+[Log]     Expected: 83000010 Received: 83000010 Matched!
+[Log]     Expected: 84033868 Received: 84033868 Matched!
+[Log]     Expected: D8397D73 Received: D8397D73 Matched!
+[Log]     Expected: F882CC22 Received: F882CC22 Matched!
+[Log]     Expected: E3EAED2A Received: E3EAED2A Matched!
+[Log]     Expected: E0000000 Received: E0000000 Matched!
+[Log] == Verifying msg ID #2 for ENC

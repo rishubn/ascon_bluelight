@@ -1,0 +1,320 @@
+ldd
+# ldd: missing file arguments
+# Try `ldd --help' for more information.
+source modelsim.tcl
+# List Of Command Line Aliases
+# 
+# imp_com                       -- Compile implementation files
+# 
+# sim_com                       -- Compile simulation files
+# 
+# com                           -- Compile files in the correct order
+# 
+# ldd                           -- Compile and run
+# 
+ldd
+# com
+# imp_com
+# sim_com
+# ** Warning: ../LWC_tb/LWC_TB_compatibility_pkg.vhd(37): (vcom-1246) Range 2 to 1 is null.
+# vsim -t ps -L work LWC_TB -gG_STOP_AT_FAULT=True 
+# Start time: 21:29:55 on Jan 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.lwc_tb_compatibility_pkg(body)
+# Loading work.nist_lwapi_pkg(body)
+# Loading work.lwc_tb(behavior)
+# Loading work.fwft_fifo(structure)
+# Loading work.lwc
+# Loading work.mkAsconCC
+# Loading work.FIFOL1
+# ** Warning: (vsim-3040) Command line generic/parameter "G_STOP_AT_FAULT" not found in design.
+# [exec] run_wave
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libnss_files.so.2 : module was loaded at an absolute address.
+# ** Note: ---------Started verifying MsgID = 1 at 60000 ps
+#    Time: 60 ns  Iteration: 0  Instance: /lwc_tb
+# PDI Instr 1879048192
+# PDI Instr  536870912
+# SQUEEZE               155000
+# Got header: typ: Npub, len:    16 eot:1 last:0
+# SQUEEZE               215000
+# Got header: typ: AD, len:     0 eot:1 last:0
+# PERMUTE               225000
+# PERMUTE               235000
+# PERMUTE               245000
+# PERMUTE               255000
+# PERMUTE               265000
+# PERMUTE               275000
+# PERMUTE               285000
+# PERMUTE               295000
+# PERMUTE               305000
+# PERMUTE               315000
+# PERMUTE               325000
+# PERMUTE               335000
+# PERMUTE               345000
+# INIT STEP               345000
+# State After 
+# 61ea20cf 09939b0f
+# 15119c36 68cc9411
+# 5a8aeb72 b22ca4ca
+# 723004c5 a571c489
+# d34364ec 026c3636
+# -
+# 0
+# Done               345000
+# SQUEEZE               355000
+# Domain sep - Empty AD               355000
+# DSB 
+# 61ea20cf 09939b0f
+# 15119c36 68cc9411
+# 5a8aeb72 b22ca4ca
+# 0a1b28f7 d6541398
+# 5f75388f 04a7c8ed
+# -
+# 0
+# DSA 
+# 61ea20cf 09939b0f
+# 15119c36 68cc9411
+# 5a8aeb72 b22ca4ca
+# 0a1b28f7 d6541398
+# 5f75388f 04a7c8ec
+# -
+# 0
+# Got header: typ: Plaintext, len:     0 eot:1 last:1
+# PDI Instr 1879048192
+# SQUEEZE               405000
+# Empty or Last PT/CT               405000
+# PERMUTE               415000
+# PERMUTE               425000
+# PERMUTE               435000
+# PERMUTE               445000
+# PERMUTE               455000
+# PDI Instr  536870912
+# PERMUTE               465000
+# PERMUTE               475000
+# PERMUTE               485000
+# PERMUTE               495000
+# PERMUTE               505000
+# PERMUTE               515000
+# PERMUTE               525000
+# PERMUTE               535000
+# Emit Tag               535000
+# State After 
+# 20179a5d 8f27ad47
+# b8814cf6 85335039
+# 74aa2d9e 950998fa
+# fc28145a ab1caa62
+# 74b49041 e52113f1
+# -
+# 0
+# Done               535000
+# SQUEEZE               545000
+# Got header: typ: Npub, len:    16 eot:1 last:0
+# SQUEEZE               605000
+# ** Note: ---------Started verifying MsgID = 2 at 615000 ps
+#    Time: 615 ns  Iteration: 0  Instance: /lwc_tb
+# Got header: typ: AD, len:    80 eot:1 last:0
+# PERMUTE               615000
+# PERMUTE               625000
+# PERMUTE               635000
+# PERMUTE               645000
+# PERMUTE               655000
+# PERMUTE               665000
+# PERMUTE               675000
+# PERMUTE               685000
+# PERMUTE               695000
+# PERMUTE               705000
+# PERMUTE               715000
+# PERMUTE               725000
+# PERMUTE               735000
+# INIT STEP               735000
+# State After 
+# 1afbb5fb b1194858
+# 7be35eaf d91e59b4
+# 5c0ff6ba 9ea6b93c
+# fc8901a7 ad0e95a5
+# 5d401f95 0b2c1863
+# -
+# 0
+# Done               735000
+# SQUEEZE               745000
+# Absorb AD               745000
+# PERMUTE               755000
+# PERMUTE               765000
+# PERMUTE               775000
+# PERMUTE               785000
+# PERMUTE               795000
+# PERMUTE               805000
+# PERMUTE               815000
+# State After 
+# 5cf7c830 bfb9fbd3
+# 4022f105 c15205c1
+# 688556db e916a8bf
+# e6a0215b cae8cf4c
+# 1a3fd75b e3dd1a19
+# -
+# 0
+# Done               815000
+ldd
+# com
+# imp_com
+# sim_com
+# ** Warning: ../LWC_tb/LWC_TB_compatibility_pkg.vhd(37): (vcom-1246) Range 2 to 1 is null.
+# End time: 21:30:13 on Jan 04,2021, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 9
+# vsim -t ps -L work LWC_TB -gG_STOP_AT_FAULT=True 
+# Start time: 21:30:13 on Jan 04,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.lwc_tb_compatibility_pkg(body)
+# Loading work.nist_lwapi_pkg(body)
+# Loading work.lwc_tb(behavior)
+# Loading work.fwft_fifo(structure)
+# Loading work.lwc
+# Loading work.mkAsconCC
+# Loading work.FIFOL1
+# ** Warning: (vsim-3040) Command line generic/parameter "G_STOP_AT_FAULT" not found in design.
+# [exec] run_wave
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/libnss_files.so.2 : module was loaded at an absolute address.
+# ** Note: ---------Started verifying MsgID = 1 at 60000 ps
+#    Time: 60 ns  Iteration: 0  Instance: /lwc_tb
+# PDI Instr 1879048192
+# PDI Instr  536870912
+# SQUEEZE               155000
+# Got header: typ: Npub, len:    16 eot:1 last:0
+# SQUEEZE               215000
+# Got header: typ: AD, len:     0 eot:1 last:0
+# PERMUTE               225000
+# PERMUTE               235000
+# PERMUTE               245000
+# PERMUTE               255000
+# PERMUTE               265000
+# PERMUTE               275000
+# PERMUTE               285000
+# PERMUTE               295000
+# PERMUTE               305000
+# PERMUTE               315000
+# PERMUTE               325000
+# PERMUTE               335000
+# PERMUTE               345000
+# INIT STEP               345000
+# State After 
+# 61ea20cf 09939b0f
+# 15119c36 68cc9411
+# 5a8aeb72 b22ca4ca
+# 723004c5 a571c489
+# d34364ec 026c3636
+# -
+# 0
+# Done               345000
+# SQUEEZE               355000
+# Domain sep - Empty AD               355000
+# DSB 
+# 61ea20cf 09939b0f
+# 15119c36 68cc9411
+# 5a8aeb72 b22ca4ca
+# 0a1b28f7 d6541398
+# 5f75388f 04a7c8ed
+# -
+# 0
+# DSA 
+# 61ea20cf 09939b0f
+# 15119c36 68cc9411
+# 5a8aeb72 b22ca4ca
+# 0a1b28f7 d6541398
+# 5f75388f 04a7c8ec
+# -
+# 0
+# Got header: typ: Plaintext, len:     0 eot:1 last:1
+# PDI Instr 1879048192
+# SQUEEZE               405000
+# Empty or Last PT/CT               405000
+# PERMUTE               415000
+# PERMUTE               425000
+# PERMUTE               435000
+# PERMUTE               445000
+# PERMUTE               455000
+# PDI Instr  536870912
+# PERMUTE               465000
+# PERMUTE               475000
+# PERMUTE               485000
+# PERMUTE               495000
+# PERMUTE               505000
+# PERMUTE               515000
+# PERMUTE               525000
+# PERMUTE               535000
+# Emit Tag               535000
+# State After 
+# 20179a5d 8f27ad47
+# b8814cf6 85335039
+# 74aa2d9e 950998fa
+# fc28145a ab1caa62
+# 74b49041 e52113f1
+# -
+# 0
+# Done               535000
+# SQUEEZE               545000
+# Got header: typ: Npub, len:    16 eot:1 last:0
+# SQUEEZE               605000
+# ** Note: ---------Started verifying MsgID = 2 at 615000 ps
+#    Time: 615 ns  Iteration: 0  Instance: /lwc_tb
+# Got header: typ: AD, len:    80 eot:1 last:0
+# PERMUTE               615000
+# PERMUTE               625000
+# PERMUTE               635000
+# PERMUTE               645000
+# PERMUTE               655000
+# PERMUTE               665000
+# PERMUTE               675000
+# PERMUTE               685000
+# PERMUTE               695000
+# PERMUTE               705000
+# PERMUTE               715000
+# PERMUTE               725000
+# PERMUTE               735000
+# INIT STEP               735000
+# State After 
+# 1afbb5fb b1194858
+# 7be35eaf d91e59b4
+# 5c0ff6ba 9ea6b93c
+# fc8901a7 ad0e95a5
+# 5d401f95 0b2c1863
+# -
+# 0
+# Done               735000
+# SQUEEZE               745000
+# Absorb AD               745000
+# PERMUTE               755000
+# PERMUTE               765000
+# PERMUTE               775000
+# PERMUTE               785000
+# PERMUTE               795000
+# PERMUTE               805000
+# PERMUTE               815000
+# State After 
+# 5cf7c830 bfb9fbd3
+# 4022f105 c15205c1
+# 688556db e916a8bf
+# e6a0215b cae8cf4c
+# 1a3fd75b e3dd1a19
+# -
+# 0
+# Done               815000
+# End time: 21:30:43 on Jan 04,2021, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 8
