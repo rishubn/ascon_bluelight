@@ -1,0 +1,522 @@
+
+
+#### Msg   2
+
+key : 64FDC67AA7E39E5B16B1438E31916C14
+npub : 864C4E0D16B7BD81CBDB1685C25E91BB
+ad : 6B857CD83B9E07C93184FF2C87947D8B5F67F42ECD51867EF612D0F9DD2434DB8B6D6755E53EAF2EF3BE123AA67E227A66DE221AE735BB56E44F6D2C9240F067EB23367A76A3C4BE6BF0A6ED4B36ED01
+pt : 
+ct : 
+tag : 07943E34E5810383E6633A87FD3403E3
+ permutation input:
+  x0=80800c0800000000
+  x1=64fdc67aa7e39e5b
+  x2=16b1438e31916c14
+  x3=864c4e0d16b7bd81
+  x4=cbdb1685c25e91bb
+ round output:
+  x0=da6917ad3570c837
+  x1=80787c6d55183d4f
+  x2=4d20de6453809ff2
+  x3=f1f6f067f135593f
+  x4=e0995fd2399e2bf0
+ round output:
+  x0=3a25bc1614994143
+  x1=170d73da8f4575a9
+  x2=2733c21c12dc752f
+  x3=92a31b681887fdc4
+  x4=c48989359140abd7
+ round output:
+  x0=b4a0ab3c2160b10b
+  x1=b9b0aeb81887503a
+  x2=2c020e0221391892
+  x3=a4412cd261cac6b1
+  x4=6144668515ef5054
+ round output:
+  x0=e82e3fc1d215bc2f
+  x1=8e36f5264e61ecc8
+  x2=7e40b795b81f66a7
+  x3=7ecd7e1c186a6f16
+  x4=4d715044b02b477c
+ round output:
+  x0=943ad4d0c4702d81
+  x1=858d072b2ee1b5a6
+  x2=39df857ecfe64e3f
+  x3=3d908a91681d3a6c
+  x4=c0bd87102054e2e4
+ round output:
+  x0=27f8ef5173e00264
+  x1=d0198ba62ad305fc
+  x2=4c4e451db99e4573
+  x3=ef67a46563b74f8b
+  x4=bdfc07cd1333eb5e
+ round output:
+  x0=5055ce3fc6da38b9
+  x1=c1d4411cec014f62
+  x2=8364eb617319d815
+  x3=a3e0bf9ca0b0bcc1
+  x4=759ae79b66f8e801
+ round output:
+  x0=c5c167499251e127
+  x1=ce5a5bdc15cceabf
+  x2=225acb17b16200a8
+  x3=232e8df8f375b752
+  x4=1d83e8827456fc39
+ round output:
+  x0=1a8eebf438e9c4e0
+  x1=d485e1c1e71599ca
+  x2=6cfcf091a987be13
+  x3=d369053b2409efae
+  x4=1b8f2ad0aeda2403
+ round output:
+  x0=a1f45fde5f183b3d
+  x1=f5aec902bbbcd7c3
+  x2=51bca5491a8ecb08
+  x3=81e1ea1ba0c30813
+  x4=c32f20ddec8e4c07
+ round output:
+  x0=fd4558d387d13dce
+  x1=92b541c99889e797
+  x2=bd75d485dbea7242
+  x3=1d2b6b4f42da0743
+  x4=1f67acb1a206fa79
+ round output:
+  x0=1afbb5fbb1194858
+  x1=7be35eafd91e59b4
+  x2=5c0ff6ba9ea6b93c
+  x3=fc8901a7ad0e95a5
+  x4=5d401f950b2c1863
+initialization:
+  x0=1afbb5fbb1194858
+  x1=7be35eafd91e59b4
+  x2=5c0ff6ba9ea6b93c
+  x3=9874c7dd0aed0bfe
+  x4=4bf15c1b3abd7477
+ permutation input:
+  x0=717ec9238a874f91
+  x1=4a67a1835e8a243f
+  x2=5c0ff6ba9ea6b93c
+  x3=9874c7dd0aed0bfe
+  x4=4bf15c1b3abd7477
+ round output:
+  x0=8ab13082d7e1f47b
+  x1=059b5b7465204d5a
+  x2=59b5b265181d9134
+  x3=9f399bf68b0a61ab
+  x4=107d180e3c6429ba
+ round output:
+  x0=857665a620232d05
+  x1=595dbda5c5e3ed6a
+  x2=60d1c9ce772fa61a
+  x3=efb7c5d09d455151
+  x4=d91ad80da7edff73
+ round output:
+  x0=d59ed4d6664249bd
+  x1=576e8f2c87e64445
+  x2=d21fb41bbde8fb4e
+  x3=4c70526f698fb90b
+  x4=8f6e21235d674e22
+ round output:
+  x0=cdeec8dd4b889735
+  x1=ec7dcb644c9624ca
+  x2=4aa694bb9a1fc163
+  x3=7ea3de6d90c3df53
+  x4=b7c44ced8da9ea3b
+ round output:
+  x0=b9e434af515df779
+  x1=756afd9270817fde
+  x2=af317272b6e05fed
+  x3=69787db98b404ec9
+  x4=ffa2426d49f154af
+ round output:
+  x0=30dc94943e6c0454
+  x1=0b3cab43ce113d37
+  x2=6479d2bfa85c977c
+  x3=c36e6ba1ca5632dc
+  x4=18ec0b8a1ca6dfb9
+ round output:
+  x0=e095d4fea6666f17
+  x1=3cd55b0a4d201a6d
+  x2=72072f156daf9ecb
+  x3=ee0ce1ed0ef6a76d
+  x4=02322c0e75384dc5
+ round output:
+  x0=f9a4b560eacfe498
+  x1=c0fd354c4af59eca
+  x2=a3543a0c73fdca95
+  x3=c36c63bc73a6dcb8
+  x4=8f35e40de7f91807
+ permutation input:
+  x0=a6c3414e279e62e6
+  x1=36efe5b597d1aa11
+  x2=a3543a0c73fdca95
+  x3=c36c63bc73a6dcb8
+  x4=8f35e40de7f91807
+ round output:
+  x0=453c40f7c7ea3efc
+  x1=ca6e9d33b560f46b
+  x2=74e620f54e31fa53
+  x3=0bd97df04e4453d7
+  x4=86258129df65f245
+ round output:
+  x0=f509d07526d30500
+  x1=ea502810f450375d
+  x2=2cef6c201d1ec496
+  x3=73192593426d0992
+  x4=588bf5f12c6bdf83
+ round output:
+  x0=42d8fd276031a799
+  x1=8e7da7c2e31af56f
+  x2=25e457d61b00f898
+  x3=b80cc1f0dc5b01c9
+  x4=ca5c7ebbd9c69fc7
+ round output:
+  x0=f667c5399da6dfb3
+  x1=d81b817323a41202
+  x2=b975f1d785485f7f
+  x3=bbc0b398c4fd15d0
+  x4=ae620292c2a06554
+ round output:
+  x0=470dad8010ed5f8f
+  x1=6d5ee88b1f53a9db
+  x2=2d8086c893f674ca
+  x3=e3756cba9c126ad7
+  x4=3180be80d0fa563d
+ round output:
+  x0=e430095e8c471c43
+  x1=9d7af344ad148541
+  x2=c6cf066cdaa5e522
+  x3=638d928c66c0589b
+  x4=c4b9a08a60e21e07
+ round output:
+  x0=1f1cf8e66425296c
+  x1=5caa1c23f669fef9
+  x2=38c6d7141a7b6744
+  x3=1a5db04583533782
+  x4=033175a7c5a1852a
+ round output:
+  x0=5cf962331206432b
+  x1=c0f80f6fcbb87cb6
+  x2=d180041ad5b622a9
+  x3=6c83cf5425ef5e20
+  x4=9b55459b981620bb
+ permutation input:
+  x0=d7940566f738ec05
+  x1=33461d556dc65ecc
+  x2=d180041ad5b622a9
+  x3=6c83cf5425ef5e20
+  x4=9b55459b981620bb
+ round output:
+  x0=9ae7596ef1ddfbb4
+  x1=4e1ce946aa8c3f69
+  x2=9f62a2bedf2e0ce1
+  x3=47b2d80da4c843ea
+  x4=9487aa564fa17649
+ round output:
+  x0=f6186fb8b37c939c
+  x1=ece9fb3968e25dd5
+  x2=2f3ccf2676c77759
+  x3=ca46978f37ff9c46
+  x4=dafadc6a01f74111
+ round output:
+  x0=9531a3ff585e7a51
+  x1=4828d870ad91ca3e
+  x2=ea69884e92b0b4dd
+  x3=bec69b00fc02f714
+  x4=392b5da3e57c5b26
+ round output:
+  x0=0920b13fe894c8cb
+  x1=c8dde688e4ae4589
+  x2=17ae417e2a754743
+  x3=f07a4232cde6a4d8
+  x4=f3ceaabd02bf5e15
+ round output:
+  x0=b1fff9b0eff82d66
+  x1=d5dfbf767079ef3d
+  x2=1200ab043a6f8271
+  x3=b78c85fd1c6a2940
+  x4=d847a843224bd23d
+ round output:
+  x0=8d74c06650d819a5
+  x1=ec1b5f6df3985fcc
+  x2=5593ad466243c197
+  x3=6783fde6b224b349
+  x4=957cae40d688eeee
+ round output:
+  x0=c85b89b6f4e69cb6
+  x1=a5bb26f477906682
+  x2=de56a4016f508b41
+  x3=4e359f3e06b878c5
+  x4=274b08405a856ba8
+ round output:
+  x0=a9d814a455845010
+  x1=a0a9fc56c9fab02d
+  x2=0961221aca5bf1b5
+  x3=b64d70c5a8438fb4
+  x4=0c00cc950702a312
+ permutation input:
+  x0=cf0636beb2b1eb46
+  x1=44e6917a5bba404a
+  x2=0961221aca5bf1b5
+  x3=b64d70c5a8438fb4
+  x4=0c00cc950702a312
+ round output:
+  x0=05a81429d6b8fd53
+  x1=716dd219226658e1
+  x2=3dad43cae0352057
+  x3=36f266f94f54cdb2
+  x4=67a242ecb2dce82b
+ round output:
+  x0=7a4431ff4e6123a8
+  x1=2e6cd55285f302b4
+  x2=9ce8248469826688
+  x3=a9dae75b1493e1dc
+  x4=764a0a7368556310
+ round output:
+  x0=66eb39fb629cd537
+  x1=c1c80183a41fec57
+  x2=c2ab6915e3c0ff9a
+  x3=ff607e829ee6abbc
+  x4=d1754be86c8173dd
+ round output:
+  x0=24d8acfda4e768b0
+  x1=c33ea445fde59316
+  x2=513f7b593351e47d
+  x3=85d984b6c4fb5c9e
+  x4=f3a0ac4bbcf671ce
+ round output:
+  x0=d5ce03c94d67f3fa
+  x1=9eaf5acb10d3ee33
+  x2=a04e74dda5cd43dc
+  x3=d170bf81f3e71508
+  x4=88dd87724ce943c8
+ round output:
+  x0=aea6a1ac36b209cc
+  x1=fe6254555977eb33
+  x2=ca7c761088863ca7
+  x3=d108a7ef3bd56312
+  x4=0160cffaa8ec2641
+ round output:
+  x0=343dd3b2736da394
+  x1=47a72b02c5e3024d
+  x2=6d6f5929538da2f9
+  x3=038a92b2fdaf3b92
+  x4=4921e4a64b7c9057
+ round output:
+  x0=088891010fc8c128
+  x1=d37356c7cda43845
+  x2=45e9c69f1f8e379a
+  x3=1b77b247c407dfa0
+  x4=d1a1f63fbb73cca1
+ permutation input:
+  x0=e3aba77b796b0596
+  x1=b883f02a8692d544
+  x2=45e9c69f1f8e379a
+  x3=1b77b247c407dfa0
+  x4=d1a1f63fbb73cca1
+ round output:
+  x0=6690f0e645c9a07a
+  x1=d06610366637d558
+  x2=f0171dfeba2cdf28
+  x3=932efff07d3d1e31
+  x4=e9eeb0997fa0c0bd
+ round output:
+  x0=8f37df035c40d0a5
+  x1=eff03768bb3ffdb2
+  x2=7634b0e9c953bfa3
+  x3=2e63f50beb33c875
+  x4=b6369a725e133d2c
+ round output:
+  x0=770cd8022706ab30
+  x1=c282e9356c02e53c
+  x2=4ee076c1ef3c0269
+  x3=838fd77d0dd233d1
+  x4=309e11b95bbbae0f
+ round output:
+  x0=a900f49040ee94a4
+  x1=5228439ee4499e28
+  x2=6f45e54c95277c62
+  x3=dc77a35d18753652
+  x4=ef5cf0b339de23d6
+ round output:
+  x0=0e0397d71addf24e
+  x1=d13469ceb7cef28a
+  x2=36d1656e462afe1c
+  x3=d82c839b73135f8b
+  x4=021ff75c86b85c3f
+ round output:
+  x0=19a64eb3d5a062f6
+  x1=003ecd8a389fdce5
+  x2=c765628a21c0c562
+  x3=06181222ae63fef3
+  x4=b6ee4bd14e889826
+ round output:
+  x0=eaa73e8de04cd3ef
+  x1=bd8183183cb9a681
+  x2=56421ddd4fa436ad
+  x3=8ba764d92836a46f
+  x4=ec412e684fa4fa7d
+ round output:
+  x0=d08128b847e28a13
+  x1=70be7950e038634c
+  x2=6983af3bc5fea79a
+  x3=45e9eb52fada352a
+  x4=2de1c7d62c83ac47
+AD Last:
+  x0=d08128b847e28a13
+  x1=70be7950e038634c
+  x2=6983af3bc5fea79a
+  x3=45e9eb52fada352a
+  x4=2de1c7d62c83ac47
+ permutation input:
+  x0=508128b847e28a13
+  x1=70be7950e038634c
+  x2=6983af3bc5fea79a
+  x3=45e9eb52fada352a
+  x4=2de1c7d62c83ac47
+ round output:
+  x0=5dd2977e1d29001c
+  x1=4a4ffecf94384fd2
+  x2=ca98332cf25c08fb
+  x3=096227333aaa2954
+  x4=e86c30014c5910cb
+ round output:
+  x0=6e5f1e681aec40a1
+  x1=c535a26bf1594f67
+  x2=32caa39ac058d627
+  x3=46dfa64f13979503
+  x4=4d60ac96d8cb27d5
+ round output:
+  x0=35d851628bbe1156
+  x1=64a6de2bbb04d9fa
+  x2=75b40e0b7df7bf90
+  x3=e5f6d30f2743a105
+  x4=085d769021176c25
+ round output:
+  x0=5366e7af63832fb0
+  x1=66809062cff7b01c
+  x2=5e0d9ec59970dcff
+  x3=d7dfe9e2ac305c73
+  x4=37d9c74bef28298d
+ round output:
+  x0=a1247715e5b7d075
+  x1=b1947c89a5b17c6a
+  x2=3756472458e12957
+  x3=1b2bfe0587954eef
+  x4=4a4295b4a93d5f2a
+ round output:
+  x0=6416b94de44d1f0d
+  x1=70346c9838820e6a
+  x2=0926d004b76e7890
+  x3=9da2141eb6e73637
+  x4=57bd49e60e26af9d
+ round output:
+  x0=2e3d5a58894dbb04
+  x1=d51e6002922cc71b
+  x2=799bcfe8c9faccbf
+  x3=206f49b78bcd98e5
+  x4=ff4b678099541147
+ round output:
+  x0=787e998c9f4b176f
+  x1=0608def66cc05f79
+  x2=8076a4c738f5e84f
+  x3=99c8967dcdb152a0
+  x4=b452680fa6f12114
+process associated data:
+  x0=787e998c9f4b176f
+  x1=0608def66cc05f79
+  x2=8076a4c738f5e84f
+  x3=99c8967dcdb152a0
+  x4=b452680fa6f12115
+process plaintext:
+  x0=f87e998c9f4b176f
+  x1=0608def66cc05f79
+  x2=8076a4c738f5e84f
+  x3=99c8967dcdb152a0
+  x4=b452680fa6f12115
+ permutation input:
+  x0=f87e998c9f4b176f
+  x1=0608def66cc05f79
+  x2=e48b62bd9f167614
+  x3=8f79d5f3fc203eb4
+  x4=b452680fa6f12115
+ round output:
+  x0=7e5bb55b603b36f2
+  x1=00b1a015d7611c07
+  x2=3774a7cae9bf5f8f
+  x3=1e437249411da339
+  x4=bd56ac445eb0e1d4
+ round output:
+  x0=c1b5c0003a05ca35
+  x1=9a2c529430259f0b
+  x2=141df7e6233f058a
+  x3=37e3ba731d314d6b
+  x4=7c0d5254b32102c6
+ round output:
+  x0=40ba41f663e44b92
+  x1=c710f69b07ce087f
+  x2=85c41fa7ccac4120
+  x3=94a81c21decec0bc
+  x4=50b6755a83898f40
+ round output:
+  x0=231adca99c3da2d5
+  x1=78003999f9f084d9
+  x2=8c57398bcb849756
+  x3=9dfa5956c409fd61
+  x4=1525d49d62f14a0b
+ round output:
+  x0=cba1d35586f584b2
+  x1=0a414c93033a889a
+  x2=3655733b0b7bf612
+  x3=bcfd100a9c1640e9
+  x4=360de76397674dd3
+ round output:
+  x0=1ffe1e93370fff94
+  x1=448fe99dc580af7b
+  x2=a219183155633493
+  x3=6bd3ca5556bfdd71
+  x4=3da47011090fe764
+ round output:
+  x0=e53c49059368bc5b
+  x1=7cfb89dcdf9bf6c2
+  x2=9fde9583988a14dd
+  x3=b1f2c99c961a445c
+  x4=8218c761a2058539
+ round output:
+  x0=76c1851c085937cf
+  x1=bebaba77700a87bc
+  x2=09c0dcb652fdfc14
+  x3=e2edef1bb1037c57
+  x4=539a2bf8c3ed856d
+ round output:
+  x0=1347d32df0b44ef8
+  x1=195287d2d9a54a25
+  x2=e83a0b56aa699790
+  x3=094a20104601aa0a
+  x4=1fa10927b174de34
+ round output:
+  x0=21d73331005af400
+  x1=8811837328b43847
+  x2=c84d9e9b5311d0c4
+  x3=ffafa525d1056f56
+  x4=4a4372a1ae0d63f5
+ round output:
+  x0=ffabb7f8c0b10c6b
+  x1=239249cca2c9fdb0
+  x2=7eede61e21d2541a
+  x3=6123f8766690a9c0
+  x4=84395b5ee1cd8242
+ round output:
+  x0=c347f724b6f6dd8e
+  x1=becb875c675437bf
+  x2=454e1bfb948b5b42
+  x3=6369f84e42629dd8
+  x4=f0d27909cca56ff7
+finalization:
+  x0=c347f724b6f6dd8e
+  x1=becb875c675437bf
+  x2=454e1bfb948b5b42
+  x3=07943e34e5810383
+  x4=e6633a87fd3403e3
+
+07943e34e5810383e6633a87fd3403e3

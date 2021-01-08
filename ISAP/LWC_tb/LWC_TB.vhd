@@ -28,8 +28,8 @@ use work.NIST_LWAPI_pkg.all;
 
 entity LWC_TB IS
     generic (
-        G_MAX_FAILURES      : integer := 100;
-        G_TEST_MODE         : integer := 0;
+        G_MAX_FAILURES      : integer := 1;
+        G_TEST_MODE         : integer := 4;
         G_TEST_IPSTALL      : integer := 10;
         G_TEST_ISSTALL      : integer := 100;
         G_TEST_OSTALL       : integer := 40;

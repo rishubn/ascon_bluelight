@@ -12,7 +12,7 @@ import AsconCC :: *;
    default_reset = "rst" *)
 module `TOP_MODULE_NAME (LwcIfc);
   let ascon <- mkAsconCC;
-  let lwc <- mkLwc(ascon);
+  let lwc <- mkLwc(ascon, False, False);
   return lwc;
 endmodule
 

@@ -1,0 +1,169 @@
+### Timing Results for LWC Core ###
+Msg ID: 1 at 80000 ps
+New Key
+Authenticated Encryption
+AD size = 0 bytes, PT size = 0 bytes
+Na = 0 Bla = 0 Ina = 0 Nm = 0 Blm = 0 Inm = 0
+Execution time = 37 cycles
+Latency = 0 cycles
+
+Msg ID: 2 at 450000 ps
+New Key
+Authenticated Encryption
+AD size = 80 bytes, PT size = 0 bytes
+Na = 5 Bla = 0 Ina = 0 Nm = 0 Blm = 0 Inm = 0
+Execution time = 62 cycles
+Latency = 0 cycles
+
+Msg ID: 3 at 1070000 ps
+New Key
+Authenticated Encryption
+AD size = 64 bytes, PT size = 0 bytes
+Na = 4 Bla = 0 Ina = 0 Nm = 0 Blm = 0 Inm = 0
+Execution time = 57 cycles
+Latency = 0 cycles
+
+Msg ID: 4 at 1640000 ps
+New Key
+Authenticated Encryption
+AD size = 1536 bytes, PT size = 0 bytes
+Na = 96 Bla = 0 Ina = 0 Nm = 0 Blm = 0 Inm = 0
+Execution time = 517 cycles
+Latency = 0 cycles
+
+Msg ID: 5 at 6810000 ps
+New Key
+Authenticated Encryption
+AD size = 64 bytes, PT size = 0 bytes
+Na = 4 Bla = 0 Ina = 0 Nm = 0 Blm = 0 Inm = 0
+Execution time = 57 cycles
+Latency = 0 cycles
+
+Msg ID: 6 at 7380000 ps
+New Key
+Authenticated Encryption
+AD size = 16 bytes, PT size = 0 bytes
+Na = 1 Bla = 0 Ina = 0 Nm = 0 Blm = 0 Inm = 0
+Execution time = 42 cycles
+Latency = 0 cycles
+
+Msg ID: 7 at 7800000 ps
+New Key
+Authenticated Encryption
+AD size = 0 bytes, PT size = 80 bytes
+Na = 0 Bla = 0 Ina = 0 Nm = 5 Blm = 0 Inm = 0
+Execution time = 62 cycles
+Latency = 3 cycles
+
+Msg ID: 8 at 8420000 ps
+New Key
+Authenticated Encryption
+AD size = 0 bytes, PT size = 64 bytes
+Na = 0 Bla = 0 Ina = 0 Nm = 4 Blm = 0 Inm = 0
+Execution time = 57 cycles
+Latency = 3 cycles
+
+Msg ID: 9 at 8990000 ps
+New Key
+Authenticated Encryption
+AD size = 0 bytes, PT size = 1536 bytes
+Na = 0 Bla = 0 Ina = 0 Nm = 96 Blm = 0 Inm = 0
+Execution time = 517 cycles
+Latency = 3 cycles
+
+Msg ID: 10 at 14160000 ps
+New Key
+Authenticated Encryption
+AD size = 0 bytes, PT size = 64 bytes
+Na = 0 Bla = 0 Ina = 0 Nm = 4 Blm = 0 Inm = 0
+Execution time = 57 cycles
+Latency = 3 cycles
+
+Msg ID: 11 at 14730000 ps
+New Key
+Authenticated Encryption
+AD size = 0 bytes, PT size = 16 bytes
+Na = 0 Bla = 0 Ina = 0 Nm = 1 Blm = 0 Inm = 0
+Execution time = 42 cycles
+Latency = 3 cycles
+
+Msg ID: 12 at 15150000 ps
+New Key
+Authenticated Encryption
+AD size = 80 bytes, PT size = 80 bytes
+Na = 5 Bla = 0 Ina = 0 Nm = 5 Blm = 0 Inm = 0
+Execution time = 87 cycles
+Latency = 3 cycles
+
+Msg ID: 13 at 16020000 ps
+New Key
+Authenticated Encryption
+AD size = 64 bytes, PT size = 64 bytes
+Na = 4 Bla = 0 Ina = 0 Nm = 4 Blm = 0 Inm = 0
+Execution time = 77 cycles
+Latency = 3 cycles
+
+Msg ID: 14 at 16790000 ps
+New Key
+Authenticated Encryption
+AD size = 1536 bytes, PT size = 1536 bytes
+Na = 96 Bla = 0 Ina = 0 Nm = 96 Blm = 0 Inm = 0
+Execution time = 997 cycles
+Latency = 3 cycles
+
+Msg ID: 15 at 26760000 ps
+New Key
+Authenticated Encryption
+AD size = 64 bytes, PT size = 64 bytes
+Na = 4 Bla = 0 Ina = 0 Nm = 4 Blm = 0 Inm = 0
+Execution time = 77 cycles
+Latency = 3 cycles
+
+Msg ID: 16 at 27530000 ps
+New Key
+Authenticated Encryption
+AD size = 16 bytes, PT size = 16 bytes
+Na = 1 Bla = 0 Ina = 0 Nm = 1 Blm = 0 Inm = 0
+Execution time = 47 cycles
+Latency = 3 cycles
+
+Msg ID: 17 at 28000000 ps
+New Key
+Authenticated Decryption
+AD size = 80 bytes, CT size = 0 bytes
+Na = 5 Bla = 0 Ina = 0 Nc = 0 Blc = 0 Inc = 0
+Execution time = 62 cycles
+Latency = 3 cycles
+
+Msg ID: 18 at 28620000 ps
+New Key
+Authenticated Decryption
+AD size = 64 bytes, CT size = 0 bytes
+Na = 4 Bla = 0 Ina = 0 Nc = 0 Blc = 0 Inc = 0
+Execution time = 57 cycles
+Latency = 3 cycles
+
+Msg ID: 19 at 29190000 ps
+New Key
+Authenticated Decryption
+AD size = 1536 bytes, CT size = 0 bytes
+Na = 96 Bla = 0 Ina = 0 Nc = 0 Blc = 0 Inc = 0
+Execution time = 517 cycles
+Latency = 3 cycles
+
+Msg ID: 20 at 34360000 ps
+New Key
+Authenticated Decryption
+AD size = 64 bytes, CT size = 0 bytes
+Na = 4 Bla = 0 Ina = 0 Nc = 0 Blc = 0 Inc = 0
+Execution time = 57 cycles
+Latency = 3 cycles
+
+Msg ID: 21 at 34930000 ps
+New Key
+Authenticated Decryption
+AD size = 16 bytes, CT size = 0 bytes
+Na = 1 Bla = 0 Ina = 0 Nc = 0 Blc = 0 Inc = 0
+Execution time = 42 cycles
+Latency = 3 cycles
+

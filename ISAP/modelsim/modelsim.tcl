@@ -88,7 +88,7 @@ alias ldd {
 alias r {
     com
     restart -force 
-    run 1000 ns
+    run 2000 ns
 }
 
 # ----------------------------------------

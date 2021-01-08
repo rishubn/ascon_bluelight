@@ -42,6 +42,7 @@ int crypto_aead_encrypt(unsigned char* c, unsigned long long* clen,
       ad += ASCON_128A_RATE;
       adlen -= ASCON_128A_RATE;
     }
+    printstate("AD Last", &s);
     /* final associated data block */
     if (adlen >= 8) {
       s.x0 ^= LOADBYTES(ad, 8);

@@ -6,7 +6,7 @@ import CryptoCore :: *;
 
 typedef 12 AsconRounds;
 typedef 12 Pa; // Number of initialization permutation rounds
-typedef 6 Pb; // Number of intermediate permutation rounds
+typedef 8 Pb; // Number of intermediate permutation rounds
 
 typedef 64 LaneWidth;
 typedef Bit#(LaneWidth) AsconLane;
@@ -59,7 +59,6 @@ function Action print_lane(String msg, AsconLane lane);
 endfunction
 
 function AsconLane pc(AsconLane x2, UInt#(TLog#(AsconRounds)) roundn);
-    
     x2[7:0] = x2[7:0] ^ roundConst[roundn];
     return x2;
 endfunction
@@ -86,19 +85,19 @@ function AsconState pl(AsconState state);
   return state;
 endfunction
 
-function AsconState initXOR(AsconState state, Bit#(KeySize) key);
-  state.x3 = state.x3 ^ key[128-1:64];
-  state.x4 = state.x4 ^ key[63:0];
+function AsconState cXOR(AsconState state, Bit#(KeySize) data);
+  state.x3 = state.x3 ^ data[128-1:64];
+  state.x4 = state.x4 ^ data[63:0];
   return state;
 endfunction
 
-function AsconState finalXOR(AsconState state, Bit#(KeySize) key);
+function AsconState keyXOR(AsconState state, Bit#(KeySize) key);
   state.x2 = state.x2 ^ key[128-1:64];
   state.x3 = state.x3 ^ key[63:0];
   return state;
 endfunction
 
-function AsconState dataXOR(AsconState state, Bit#(128) data);
+function AsconState rXOR(AsconState state, Bit#(128) data);
   state.x0 = state.x0 ^ data[128-1:64];
   state.x1 = state.x1 ^ data[63:0];
   return state;
@@ -123,4 +122,13 @@ function AsconState asconRound(AsconState state, UInt#(TLog#(AsconRounds)) round
     return state;
 endfunction
 
+function AsconState asconRound2(AsconState state, UInt#(TLog#(AsconRounds)) roundn);
+    let s = asconRound(state, roundn);
+    return asconRound(s, roundn-1);
+endfunction
+
+function AsconState asconRound4(AsconState state, UInt#(TLog#(AsconRounds)) roundn);
+    let s = asconRound2(state, roundn);
+    return asconRound2(s, roundn-2);
+endfunction
 endpackage : Asconp

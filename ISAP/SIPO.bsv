@@ -16,6 +16,8 @@ interface SIPO #(numeric type size, type el_type);
   (* always_ready *)
   method Bool notFull;
   (* always_ready *)
+  method Bool isEmpty;
+  (* always_ready *)
   method Vector#(size, el_type) data;
 endinterface
 
@@ -28,7 +30,7 @@ module mkPipelineSIPO (SIPO#(size, el_type)) provisos (Bits#(el_type, el_type_sz
   let pwDeq <- mkPulseWire();
 
   Bool full = count_reg == fromInteger(valueOf(size));
-  
+  Bool empty = count_reg == 0;
   (* fire_when_enabled, no_implicit_conditions *)
   rule update if (isValid(rwEnq.wget) || pwDeq);
     case (rwEnq.wget) matches
@@ -68,6 +70,10 @@ module mkPipelineSIPO (SIPO#(size, el_type)) provisos (Bits#(el_type, el_type_sz
   method Bool notFull;
     return !full;
   endmethod
+
+  method Bool isEmpty;
+    return empty;
+  endmethod
 endmodule : mkPipelineSIPO
 
 
@@ -76,7 +82,8 @@ module mkSIPO (SIPO#(size, el_type)) provisos (Bits#(el_type, el_type_sz));
   Reg#(CountType#(size)) count_reg <- mkReg(0);
 
   Bool full = count_reg == fromInteger(valueOf(size));
-
+  Bool empty = count_reg == 0;
+  
   method Action enq(el_type v) if (!full);
     vec <= shiftInAt0(vec, v);
     count_reg <= count_reg + 1;
@@ -102,6 +109,9 @@ module mkSIPO (SIPO#(size, el_type)) provisos (Bits#(el_type, el_type_sz));
     return !full;
   endmethod
 
+  method Bool isEmpty;
+    return empty;
+  endmethod
 endmodule : mkSIPO
 
 

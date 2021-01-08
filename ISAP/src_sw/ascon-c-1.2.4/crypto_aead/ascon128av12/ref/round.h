@@ -11,7 +11,7 @@ static inline void ROUND(state_t* s, uint8_t C) {
   state_t t;
   /* addition of round constant */
   s->x2 ^= C;
-  printstate(" round constant", s);
+ // printstate(" round constant", s);
   /* substitution layer */
   s->x0 ^= s->x4;
   s->x4 ^= s->x3;
@@ -27,7 +27,7 @@ static inline void ROUND(state_t* s, uint8_t C) {
   t.x0 ^= t.x4;
   t.x3 ^= t.x2;
   t.x2 = ~t.x2;
-  printstate(" substitution layer", &t); 
+ // printstate(" substitution layer", &t); 
   /* linear diffusion layer */
   s->x0 = t.x0 ^ ROR(t.x0, 19) ^ ROR(t.x0, 28);
   s->x1 = t.x1 ^ ROR(t.x1, 61) ^ ROR(t.x1, 39);
